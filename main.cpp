@@ -161,17 +161,17 @@ int main()
     rentACar(6, 2); 
     
     //1)
-    addNumbers(1,2);
+    addNumbers(1,2); FIXME add some space around your params so they're more readable
     //2)
-    subtractNumbers(6,5);
+    subtractNumbers(6,5); FIXME add some space around your params so they're more readable
     //3)
     truthy();
     //4)
     nullAndVoid(1);
     //5)
-    count(5,5,100);
+    count(5,5,100); FIXME add some space around your params so they're more readable
     //6)
-    multiply(12,12);
+    multiply(12,12); FIXME add some space around your params so they're more readable
     //7)
     fractions(1.2f, 3.4f);
     //8)
