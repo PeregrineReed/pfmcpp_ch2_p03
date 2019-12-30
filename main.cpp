@@ -9,15 +9,13 @@ void ignoreUnused(T&&...) { }
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ char
+ bool
+ float
+ double
+ unsigned int
+ void
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -49,10 +47,26 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int zero = 0;
+    int one = 1;
+    int two = 2;
+    char word = 'w';
+    char letter = 'l';
+    char character = 'h';
+    bool cool = true;
+    bool school = false;
+    bool ruleCoolSchool = true;
+    float fraction = 1.2f;
+    float withDecimal = 3.4f;
+    float ingPointNumber = 5.6f;
+    double a = 0.1;
+    double b = 1.2;
+    double c = 3.4;
+    unsigned int positive = 2;
+    unsigned int notNegative = 3;
+    unsigned int three = 3;
     
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, zero, one, two, word, letter, character, cool, school, ruleCoolSchool, fraction, withDecimal, ingPointNumber, a, b, c, positive, notNegative, three); //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
@@ -67,68 +81,105 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addNumbers(int num1, int num2)
+{
+  ignoreUnused(num1, num2);
+  return {};
+}
 /*
  2)
  */
-
+int subtractNumbers(int num1, int num2)
+{
+  ignoreUnused(num1, num2);
+  return {};
+}
 /*
  3)
  */
-
+bool truthy(bool truth = true)
+{
+  ignoreUnused(truth);
+  return {};
+}
 /*
  4)
  */
-
+void nullAndVoid(int zero = 0, float zeroPointZero = 0.f)
+{
+  ignoreUnused(zero, zeroPointZero);
+}
 /*
  5)
  */
-
+int count(int start = 0, int increment = 1, int end = 10)
+{
+  ignoreUnused(start, increment, end);
+  return {};
+}
 /*
  6)
  */
-
+int multiply(int num1, int num2, int num3 = 3)
+{
+  ignoreUnused(num1, num2, num3);
+  return {};
+}
 /*
  7)
  */
-
+float fractions(float float1, float float2, float pi = 3.14f)
+{
+  ignoreUnused(float1, float2, pi);
+  return {};
+}
 /*
  8)
  */
-
+char abcs(char a = 'a', char b = 'b', char c = 'c')
+{
+  ignoreUnused(a, b, c);
+  return {};
+}
 /*
  9)
  */
-
+bool isTodayWednesday()
+{
+  return {};
+}
 /*
  10)
  */
-
+void sayNothing()
+{
+  isTodayWednesday();
+}
 int main()
 {
     //example of calling that function
     rentACar(6, 2); 
     
     //1)
-    
+    addNumbers(1, 2);
     //2)
-    
+    subtractNumbers(6, 5);
     //3)
-    
+    truthy();
     //4)
-    
+    nullAndVoid(1);
     //5)
-    
+    count(5, 5, 100);
     //6)
-    
+    multiply(12, 12);
     //7)
-    
+    fractions(1.2f, 3.4f);
     //8)
-    
+    abcs('z');
     //9)
-    
+    isTodayWednesday();
     //10)
-    
+    sayNothing();
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
